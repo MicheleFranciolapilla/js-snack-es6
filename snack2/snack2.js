@@ -22,14 +22,23 @@ let squadre = [
 
 let int_random = (max) => Math.floor(Math.random() * (max + 1));
 
-for (let i = 0; i < squadre.length; i++)
-{
-    console.log(squadre[i]);
-}
-
 squadre.forEach((element) =>
 {
     element.punti = int_random(35);
     element.falli = int_random(10);
 });
-console.log(squadre);
+console.log("Squadre con campi 'punti' e 'falli' casuali... ",squadre);
+
+let new_array = [];
+
+squadre.forEach((element) =>
+{
+    const {nome, falli} = element;
+    const new_obj = {"nome":nome, "falli":falli};
+    new_array.push(new_obj);
+});
+
+for (let i = 0; i < squadre.length; i++)
+{
+    console.log(new_array[i]);
+}

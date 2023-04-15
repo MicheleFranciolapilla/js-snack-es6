@@ -5,7 +5,7 @@
 
 let     data_array          = [];
 
-alert("Sei pronto?");
+alert("Sei pronto?. N.B. NON FACCIO ALCUN CONTROLLO SULL'EVENTUALE RIPETIZIONE DEI DATI INSERITI, QUINDI ASTIENITI");
 
 let     finished            = false;
 // Ciclo do-while di acquisizione dati

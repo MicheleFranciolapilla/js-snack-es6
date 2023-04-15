@@ -34,11 +34,10 @@ let new_array = [];
 squadre.forEach((element) =>
 {
     const {nome, falli} = element;
-    const new_obj = {"nome":nome, "falli":falli};
-    new_array.push(new_obj);
+    new_array.push({nome, falli});
 });
 
 for (let i = 0; i < squadre.length; i++)
 {
-    console.log(new_array[i]);
+    console.log("Elemento nr ",i + 1," del nuovo array, con solo nome e falli: ",new_array[i]);
 }

@@ -20,3 +20,30 @@ do
         : (data === "") ? alert("Non hai ancora inserito nessun dato") : data_array.push(data);
 } while(!input_done);
 console.log(data_array);
+
+// Indici validi minimo e massimo che consentano, nel caso, anche di prendere in esame l'intero array (dovendo escludere gli indici inseriti)
+const min_allowed = 0;
+const max_allowed = data_array.length + 1;
+input_done = false;
+let first_nr = -1;
+do
+{
+    first_nr = parseInt(prompt(`Inserisci il primo indice, compreso tra ${min_allowed} e ${max_allowed}, inclusi ......`));
+    if ((first_nr >= min_allowed) && (first_nr <= max_allowed))
+    {
+        (input_done = true);
+    }
+} while(!input_done);
+console.log(first_nr);
+
+input_done = false;
+let second_nr = -1;
+do
+{
+    second_nr = parseInt(prompt(`Inserisci il secondo indice, compreso tra ${min_allowed} e ${max_allowed}, inclusi, cercando di evitare il reinserimento del numero ${first_nr} ......`));
+    if ((second_nr >= min_allowed) && (second_nr <= max_allowed))
+    {
+        (input_done = true);
+    }
+} while(!input_done);
+console.log(second_nr);
